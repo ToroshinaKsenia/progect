@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Региональный портал медицинских услуг</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="images/Logotip.jpg" alt="Логотип портала">
+        <h1>Региональный портал медицинских услуг</h1>
+        <div class="auth-buttons">
+            <button onclick="selectRegion()">Выбрать регион</button>
+            <button onclick="login()">Вход</button>
+            <button onclick="register()">Регистрация</button>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#services">Наши услуги</a></li>
+                <li><a href="#doctors">Врачи</a></li>
+                <li><a href="#doctors-schedule">Расписание работы врачей</a></li>
+                <li><a href="#map-search">Поиск прикрепления участка</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="services" class="services">
+            <h2>Наши услуги</h2>
+            <article class="service-item">
+                <h3>Консультативные услуги</h3>
+                <p>Мы предлагаем квалифицированную медицинскую помощь, консультации и диагностику.</p>
+                <ul>
+                    <li>Консультации терапевта</li>
+                    <li>Второе мнение от специалистов</li>
+                    <li>Психологические консультации</li>
+                    <li>Специальные консультации по заболеваниям</li>
+                </ul>
+                <p><strong>Преимущества:</strong> Индивидуальный подход, возможность выбора специалиста, быстрое оформление медицинской документации.</p>
+            </article>
+
+            <article class="service-item">
+                <h3>Лабораторные исследования</h3>
+                <p>Проводим широкий спектр лабораторных анализов для диагностики заболеваний.</p>
+                <ul>
+                    <li>Общий анализ крови и мочи</li>
+                    <li>Биохимические анализы</li>
+                    <li>Гормональные исследования</li>
+                    <li>Тесты на инфекции и аллергены</li>
+                </ul>
+                <p><strong>Преимущества:</strong> Высококвалифицированные лаборанты, современные технологии, быстрая обработка результатов.</p>
+            </article>
+
+            <article class="service-item">
+                <h3>Профилактические осмотры</h3>
+                <p>Регулярные осмотры для раннего выявления заболеваний и поддержания здоровья.</p>
+                <ul>
+                    <li>Общий медицинский осмотр</li>
+                    <li>Специальные осмотры для различных возрастных групп</li>
+                </ul>
+                <p><strong>Преимущества:</strong> Индивидуальные планы обследования, рекомендации по здоровому образу жизни.</p>
+            </article>
+
+            <article class="service-item">
+                <h3>Вакцинация</h3>
+                <p>Проводим вакцинацию против различных заболеваний.</p>
+                <ul>
+                    <li>Детская вакцинация</li>
+                    <li>Вакцинация для взрослых (грипп, коронавирус и др.)</li>
+                </ul>
+                <p><strong>Преимущества:</strong> Безопасные и эффективные вакцины, контроль состояния здоровья после вакцинации.</p>
+            </article>
+
+            <article class="service-item">
+                <h3>Медицинская реабилитация</h3>
+                <p>Программы восстановления после заболеваний и хирургических вмешательств.</p>
+                <ul>
+                    <li>Физиотерапия</li>
+                    <li>Массаж</li>
+                    <li>Психологическая поддержка</li>
+                </ul>
+                <p><strong>Преимущества:</strong> Индивидуальные программы реабилитации, профессиональный подход к каждому пациенту.</p>
+            </article>
+        </section>
+
+        <section id="doctors" class="doctors">
+            <h2>Врачи</h2>
+            <article class="doctor-item">
+                <h3>Иванов Юрий Степанович</h3>
+                <img src="images/Ivanov Yuri Stepanovich.jpg" alt="Иванов Юрий Степанович">
+                <p>Терапевт. Опыт работы: 10 лет.</p>
+            </article>
+            <article class="doctor-item">
+                <h3>Петрова Анна Петровна</h3>
+                <img src="images/Petrova Anna Petrovna.jpg" alt="Петрова Анна Петровна">
+                <p>Хирург. Опыт работы: 8 лет.</p>
+            </article>
+            <article class="doctor-item">
+                <h3>Сидоров Сергей Александрович</h3>
+                <img src="images/Sidorov Sergey Alexandrovich.jpg" alt="Сидоров Сергей Александрович">
+                <p>Педиатр. Опыт работы: 5 лет.</p>
+            </article>
+            <article class="doctor-item">
+                <h3>Кузнецова Ольга Васильевна</h3>
+                <img src="images/Kuznetsova Olga Vasilievna.jpg" alt="Кузнецова Ольга Васильевна">
+                <p>Офтальмолог. Опыт работы: 7 лет.</p>
+            </article>
+            <article class="doctor-item">
+                <h3>Фёдоров Роман Викторович</h3>
+                <img src="images/Fedorov Roman Viktorovich.jpg" alt="Фёдоров Роман Викторович">
+                <p>Невролог. Опыт работы: 6 лет.</p>
+            </article>
+            <article class="doctor-item">
+                <h3>Захарова Наталья Петровна</h3>
+                <img src="images/Zakharova Natalya Petrovna.jpg" alt="Захарова Наталья Петровна">
+                <p>Стоматолог. Опыт работы: 9 лет.</p>
+            </article>
+            <article class="doctor-item">
+                <h3>Смирнов Алексей Евгеньевич</h3>
+                <img src="images/Smirnov Alexey Evgenievich.jpg" alt="Смирнов Алексей Евгеньевич">
+                <p>Онколог. Опыт работы: 4 года.</p>
+            </article>
+            <article class="doctor-item">
+                <h3>Дмитриева Светлана Игоревна</h3>
+                <img src="images/Dmitrieva Svetlana Igorevna.jpg" alt="Дмитриева Светлана Игоревна">
+                <p>Врач общей практики. Опыт работы: 12 лет.</p>
+            </article>
+            <article class="doctor-item">
+                <h3>Алексеева Мария Андреевна</h3>
+                <img src="images/Alekseeva Maria Andreevna.jpg" alt="Алексеева Мария Андреевна">
+                <p>Акушер-гинеколог. Опыт работы: 11 лет.</p>
+            </article>
+        </section>
+
+        <section id="doctors-schedule" class="doctors-schedule">
+            <h2>Расписание работы врачей</h2>
+            <article class="schedule-item">
+                <h3>Расписание Иванова И.И.</h3>
+                <p>Пн-Пт: 9:00 - 18:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Петровой А.П.</h3>
+                <p>Пн-Пт: 10:00 - 19:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Сидорова С.А.</h3>
+                <p>Пн-Пт: 9:00 - 17:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Кузнецовой О.В.</h3>
+                <p>Вт-Чт: 9:00 - 16:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Фёдорова Р.В.</h3>
+                <p>Пн-Пт: 9:00 - 18:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Захаровой Н.П.</h3>
+                <p>Пн-Пт: 10:00 - 18:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Смирнова А.Е.</h3>
+                <p>Пн-Пт: 8:00 - 16:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Дмитриевой С.И.</h3>
+                <p>Пн-Пт: 10:00 - 18:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Алексеева М.А.</h3>
+                <p>Пн-Пт: 9:00 - 17:00</p>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <h2>Поиск прикрепления участка</h2>
+            <div id="map-search" class="map-search">
+                <p>Введите адрес для поиска:</p>
+                <input type="text" placeholder="Ваш адрес">
+                <button onclick="searchAddress()">Поиск</button>
+            </div>
+        </aside>
+    </main>
+    
+    <footer class="footer" id="contact">
+        <h2>Контакты</h2>
+        <p>Электронная почта: info@medicalportal.ru</p>
+        <div class="footer-buttons">
+            <button onclick="aboutPortal()">О портале</button>
+            <button onclick="news()">Новости</button>
+            <button onclick="feedback()">Обратная связь</button>
+        </div>
+        <p>&copy; 2024 Региональный портал медицинских услуг</p>
+    </footer>
+
+    <script>
+        function selectRegion() {
+            alert("Выберите регион");
+        }
+
+        function login() {
+            alert("Вход");
+        }
+
+        function register() {
+            alert("Регистрация");
+        }
+
+        function searchAddress() {
+            alert("Поиск адреса");
+        }
+
+        function aboutPortal() {
+            alert("Информация о портале");
+        }
+
+        function news() {
+            alert("Новости");
+        }
+
+        function feedback() {
+            alert("Обратная связь");
+        }
+    </script>
+</body>
+</html>
