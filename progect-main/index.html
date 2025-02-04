@@ -4,10 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Региональный портал медицинских услуг</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Универсальные стили */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #3f898c; /* Светлый фон для всего документа */
+            color: #131414; /* Цвет текста */
+        }
+
+        /* Фоновый стиль */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/Background.jpg'); /* Замените путь на корректный */
+            background-size: cover; /* Занимает всю страницу */
+            z-index: -1; /* Помещает фон ниже других элементов */
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto; /* Центрирование контейнера */
+        }
+
+        /* Заголовки */
+        h1, h2, h3 {
+            color: #102c35; /* Тёмно-синий цвет заголовков */
+        }
+
+        .services__title {
+            text-align: center; /* Центрирование заголовка */
+            margin: 20px 0; /* Отступы сверху и снизу */
+        }
+
+        /* Логотип */
+        .logo {
+            display: flex;
+            align-items: center; /* Вертикальное центирование */
+            margin-left: 10px; /* Сдвигаем логотип влево */
+        }
+
+        /* Стили для ссылок */
+        a {
+            color: #101c1b; /* Синий цвет для ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Подчеркивание при наведении */
+        }
+
+        /* Основные стили для кнопок */
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            background-color: #092f39; /* Синий фон кнопок */
+            color: white; /* Белый текст на кнопках */
+            border-radius: 5px; /* Закругленные углы */
+            cursor: pointer; /* Указатель при наведении */
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Более темный цвет при наведении */
+        }
+
+        /* Стили для карточек услуг и врачей */
+        .service-item, .doctor-item {
+            background-color: white;
+            border: 1px solid #ddd; /* Светло-серая граница */
+            margin: 10px auto; /* Отступ вокруг элемент с авто для центрирования */
+            padding: 15px;
+            border-radius: 5px; /* Закругленные углы */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+            width: 90%; /* Уменьшение ширины */
+            max-width: 400px; /* Максимальная ширина карточек */
+            text-align: center; /* Центрирование текста */
+        }
+
+        .service-item__title, .doctor-item__name {
+            font-size: 18px; /* Размер шрифта заголовков услуг и врачей */
+        }
+
+        /* Стили для расписания */
+        .schedule-item {
+            margin: 10px 0;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #eeeeee; /* Светло-серый фон для боковой панели */
+            padding: 15px;
+            border-radius: 5px; /* Закругленные углы */
+        }
+
+        /* Футер */
+        .footer {
+            background-color: #81c3c5; /* Синий фон для футера */
+            color: #173f40; /* Белый текст в футере */
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
+    <div class="background"></div> <!-- Фоновое изображение -->
+
+    <header class="header container">
         <div class="logo logo--header">
             <img src="images/Logotip.jpg" alt="Логотип портала" class="logo__image">
             <h1 class="logo__title">Региональный портал медицинских услуг</h1>
@@ -18,7 +124,6 @@
             <button class="btn auth-button auth-button--register" onclick="register()">Регистрация</button>
         </div>
         <nav class="navigation navigation--header">
-            <img src="images/Background.jpg" alt="Фон" class="Fon">
             <ul class="navigation__list">
                 <li class="navigation__item"><a class="navigation__link" href="#services">Наши услуги</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="#doctors">Врачи</a></li>
@@ -28,8 +133,10 @@
             </ul>
         </nav>
     </header>
-    <h2 class="services__title">Наши услуги</h2>  
-    <main class="main-content">
+    
+    <h2 class="services__title">Наши услуги</h2>
+    
+    <main class="main container">
         <section id="services" class="services block--services">
             <article class="service-item block--service service-item--consultations">
                 <img src="images/konsultaciy.png" alt="Иконка консультации" class="logo__image"> 
@@ -94,51 +201,54 @@
 
         <section id="doctors" class="doctors block--doctors">
             <h2 class="doctors__title">Врачи <img class="card__icon" src="icon/t4.png" alt="Врачи" width="24" height="24"></h2>
-            <article class="doctor-item block--doctor doctor-item--ivanov">
-                <h3 class="doctor-item__name">Иванов Юрий Степанович</h3>
-                <img src="images/Ivanov Yuri Stepanovich.jpg" alt="Иванов Юрий Степанович" class="doctor-item__image">
-                <p class="doctor-item__experience">Терапевт. Опыт работы: 10 лет.</p>
-            </article>
-            <article class="doctor-item block--doctor doctor-item--petrova">
-                <h3 class="doctor-item__name">Петрова Анна Петровна</h3>
-                <img src="images/Petrova Anna Petrovna.jpg" alt="Петрова Анна Петровна" class="doctor-item__image">
-                <p class="doctor-item__experience">Хирург. Опыт работы: 8 лет.</p>
-            </article>
-            <article class="doctor-item block--doctor doctor-item--sidorov">
-                <h3 class="doctor-item__name">Сидоров Сергей Александрович</h3>
-                <img src="images/Sidorov Sergey Alexandrovich.jpg" alt="Сидоров Сергей Александрович" class="doctor-item__image">
-                <p class="doctor-item__experience">Педиатр. Опыт работы: 5 лет.</p>
-            </article>
-            <article class="doctor-item block--doctor doctor-item--kuznetsova">
-                <h3 class="doctor-item__name">Кузнецова Ольга Васильевна</h3>
-                <img src="images/Kuznetsova Olga Vasilievna.jpg" alt="Кузнецова Ольга Васильевна" class="doctor-item__image">
-                <p class="doctor-item__experience">Офтальмолог. Опыт работы: 7 лет.</p>
-            </article>
-            <article class="doctor-item block--doctor doctor-item--fedorov">
-                <h3 class="doctor-item__name">Фёдоров Роман Викторович</h3>
-                <img src="images/Fedorov Roman Viktorovich.jpg" alt="Фёдоров Роман Викторович" class="doctor-item__image">
-                <p class="doctor-item__experience">Невролог. Опыт работы: 6 лет.</p>
-            </article>
-            <article class="doctor-item block--doctor doctor-item--zakharova">
-                <h3 class="doctor-item__name">Захарова Наталья Петровна</h3>
-                <img src="images/Zakharova Natalya Petrovna.jpg" alt="Захарова Наталья Петровна" class="doctor-item__image">
-                <p class="doctor-item__experience">Стоматолог. Опыт работы: 9 лет.</p>
-            </article>
-            <article class="doctor-item block--doctor doctor-item--smirnov">
-                <h3 class="doctor-item__name">Смирнов Алексей Евгеньевич</h3>
-                <img src="images/Smirnov Alexey Evgenievich.jpg" alt="Смирнов Алексей Евгеньевич" class="doctor-item__image">
-                <p class="doctor-item__experience">Онколог. Опыт работы: 4 года.</p>
-            </article>
-            <article class="doctor-item block--doctor doctor-item--dmitrieva">
-                <h3 class="doctor-item__name">Дмитриева Светлана Игоревна</h3>
-                <img src="images/Dmitrieva Svetlana Igorevna.jpg" alt="Дмитриева Светлана Игоревна" class="doctor-item__image">
-                <p class="doctor-item__experience">Врач общей практики. Опыт работы: 12 лет.</p>
-            </article>
-            <article class="doctor-item block--doctor doctor-item--alekseeva">
-                <h3 class="doctor-item__name">Алексеева Мария Андреевна</h3>
-                <img src="images/Alekseeva Maria Andreevna.jpg" alt="Алексеева Мария Андреевна" class="doctor-item__image">
-                <p class="doctor-item__experience">Акушер-гинеколог. Опыт работы: 11 лет.</p>
-            </article>
+            <!-- Центрирование карточек врачей -->
+            <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+                <article class="doctor-item block--doctor doctor-item--ivanov">
+                    <h3 class="doctor-item__name">Иванов Юрий Степанович</h3>
+                    <img src="images/Ivanov Yuri Stepanovich.jpg" alt="Иванов Юрий Степанович" class="doctor-item__image">
+                    <p class="doctor-item__experience">Терапевт. Опыт работы: 10 лет.</p>
+                </article>
+                <article class="doctor-item block--doctor doctor-item--petrova">
+                    <h3 class="doctor-item__name">Петрова Анна Петровна</h3>
+                    <img src="images/Petrova Anna Petrovna.jpg" alt="Петрова Анна Петровна" class="doctor-item__image">
+                    <p class="doctor-item__experience">Хирург. Опыт работы: 8 лет.</p>
+                </article>
+                <article class="doctor-item block--doctor doctor-item--sidorov">
+                    <h3 class="doctor-item__name">Сидоров Сергей Александрович</h3>
+                    <img src="images/Sidorov Sergey Alexandrovich.jpg" alt="Сидоров Сергей Александрович" class="doctor-item__image">
+                    <p class="doctor-item__experience">Педиатр. Опыт работы: 5 лет.</p>
+                </article>
+                <article class="doctor-item block--doctor doctor-item--kuznetsova">
+                    <h3 class="doctor-item__name">Кузнецова Ольга Васильевна</h3>
+                    <img src="images/Kuznetsova Olga Vasilievna.jpg" alt="Кузнецова Ольга Васильевна" class="doctor-item__image">
+                    <p class="doctor-item__experience">Офтальмолог. Опыт работы: 7 лет.</p>
+                </article>
+                <article class="doctor-item block--doctor doctor-item--fedorov">
+                    <h3 class="doctor-item__name">Фёдоров Роман Викторович</h3>
+                    <img src="images/Fedorov Roman Viktorovich.jpg" alt="Фёдоров Роман Викторович" class="doctor-item__image">
+                    <p class="doctor-item__experience">Невролог. Опыт работы: 6 лет.</p>
+                </article>
+                <article class="doctor-item block--doctor doctor-item--zakharova">
+                    <h3 class="doctor-item__name">Захарова Наталья Петровна</h3>
+                    <img src="images/Zakharova Natalya Petrovna.jpg" alt="Захарова Наталья Петровна" class="doctor-item__image">
+                    <p class="doctor-item__experience">Стоматолог. Опыт работы: 9 лет.</p>
+                </article>
+                <article class="doctor-item block--doctor doctor-item--smirnov">
+                    <h3 class="doctor-item__name">Смирнов Алексей Евгеньевич</h3>
+                    <img src="images/Smirnov Alexey Evgenievich.jpg" alt="Смирнов Алексей Евгеньевич" class="doctor-item__image">
+                    <p class="doctor-item__experience">Онколог. Опыт работы: 4 года.</p>
+                </article>
+                <article class="doctor-item block--doctor doctor-item--dmitrieva">
+                    <h3 class="doctor-item__name">Дмитриева Светлана Игоревна</h3>
+                    <img src="images/Dmitrieva Svetlana Igorevna.jpg" alt="Дмитриева Светлана Игоревна" class="doctor-item__image">
+                    <p class="doctor-item__experience">Врач общей практики. Опыт работы: 12 лет.</p>
+                </article>
+                <article class="doctor-item block--doctor doctor-item--alekseeva">
+                    <h3 class="doctor-item__name">Алексеева Мария Андреевна</h3>
+                    <img src="images/Alekseeva Maria Andreevna.jpg" alt="Алексеева Мария Андреевна" class="doctor-item__image">
+                    <p class="doctor-item__experience">Акушер-гинеколог. Опыт работы: 11 лет.</p>
+                </article>
+            </div>
         </section>
 
         <section id="doctors-schedule" class="doctors-schedule block--schedule">
@@ -190,46 +300,36 @@
             </div>
         </aside>
     </main>
-    
-    <footer class="footer block--contact" id="contact">
+
+    <footer class="footer container" id="contact">
         <h2 class="footer__title">Контакты <img class="card__icon" src="icon/apparat.png" alt="Контакты" width="24" height="24"></h2>
-        <p class="footer__email">Электронная почта: info@medicalportal.ru</p>
-        <div class="footer-buttons footer-buttons--contact">
-            <button class="btn footer-button footer-button--about" onclick="aboutPortal()">О портале</button>
-            <button class="btn footer-button footer-button--news" onclick="news()">Новости</button>
-            <button class="btn footer-button footer-button--feedback" onclick="feedback()">Обратная связь</button>
-        </div>
-        <p class="footer__copyright">&copy; 2024 Региональный портал медицинских услуг</p>
+        <p class="footer__email">Email: info@medportal.ru</p>
+        <p class="footer__phone">Телефон: +7 (123) 456-78-90</p>
+        <p class="footer__address">Адрес: г. Москва, ул. Примерная, д. 1</p>
+        <p class="footer__copyright">&copy; 2025 Региональный портал медицинских услуг. Все права защищены.</p>
     </footer>
 
     <script>
         function selectRegion() {
-            alert("Выберите регион");
+            // Логика для выбора региона
+            alert("Выберите регион.");
         }
 
         function login() {
-            alert("Вход");
+            // Логика для входа
+            alert("Вход в систему.");
         }
 
         function register() {
-            alert("Регистрация");
+            // Логика для регистрации
+            alert("Регистрация нового аккаунта.");
         }
 
         function searchAddress() {
-            alert("Поиск адреса");
-        }
-
-        function aboutPortal() {
-            alert("Информация о портале");
-        }
-
-        function news() {
-            alert("Новости");
-        }
-
-        function feedback() {
-            alert("Обратная связь");
+            // Логика для поиска прикрепления участка
+            alert("Поиск адреса.");
         }
     </script>
 </body>
 </html>
+
