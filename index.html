@@ -1,34 +1,381 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Региональный портал медицинских услуг</title>
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <style>
+        /* Универсальные стили */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #3f898c;
+            color: #131414;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/Background.jpg');
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            color: #102c35;
+        }
+
+        .services__title {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        a {
+            color: #101c1b;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            background-color: #092f39;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .service-item, .doctor-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 10px auto;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .service-item__title, .doctor-item__name {
+            font-size: 18px;
+        }
+
+        .appointment {
+            background-color: #fafafa;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .appointment__title {
+            text-align: center;
+            color: #102c35;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-select,
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .schedule-item {
+            margin: 10px 0;
+        }
+
+        .sidebar {
+            background-color: #eeeeee;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: #81c3c5;
+            color: #173f40;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <a><img src="images/логотип.png" alt="Логотип" width="100" height="100"></a>
-        <nav>
+    <div class="background"></div>
+
+    <header class="header container">
+        <div class="logo">
+            <img src="images/Logotip.jpg" alt="Логотип портала" class="logo__image">
+            <h1>Региональный портал медицинских услуг</h1>
+        </div>
+        <div class="auth-buttons">
+            <button class="btn" onclick="selectRegion()">Выбрать регион</button>
+            <button class="btn" onclick="login()">Вход</button>
+            <button class="btn" onclick="register()">Регистрация</button>
+        </div>
+        <nav class="navigation">
             <ul>
-            <button> >Регистрация</button>
-            <button> >Вход</button>
+                <li><a href="#services">Наши услуги</a></li>
+                <li><a href="#doctors">Врачи</a></li>
+                <li><a href="#doctors-schedule">Расписание работы врачей</a></li>
+                <li><a href="#map-search">Поиск прикрепления участка</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <div>
-            <section>
-                <h2></h2>
-                <p>Описание</p>
-                <button><li><a href="#">Открыть</a></li></button>
-                <button><li><a href="#">Найти</a></li></button>
-            </section>
-        </div>
-    </main> 
-    <footer>
-        <p>О портале</p>
-        <p>Новости</p>
-        <p>Обратная связь</p>
+
+    <h2 class="services__title">Наши услуги</h2>
+
+    <main class="container">
+        <section id="services">
+            <article class="service-item">
+                <img src="images/konsultaciy.png" alt="Иконка консультации">
+                <h3>Консультативные услуги</h3>
+                <p>Мы предлагаем квалифицированную медицинскую помощь, консультации и диагностику.</p>
+                <ul>
+                    <li>Консультации терапевта</li>
+                    <li>Второе мнение от специалистов</li>
+                    <li>Психологические консультации</li>
+                    <li>Специальные консультации по заболеваниям</li>
+                </ul>
+                <p><strong>Преимущества:</strong> Индивидуальный подход, возможность выбора специалиста, быстрое оформление медицинской документации.</p>
+            </article>
+
+            <article class="service-item">
+                <img src="images/konsultaciy.png" alt="Иконка консультации">
+                <h3>Лабораторные исследования</h3>
+                <p>Проводим широкий спектр лабораторных анализов для диагностики заболеваний.</p>
+                <ul>
+                    <li>Общий анализ крови и мочи</li>
+                    <li>Биохимические анализы</li>
+                    <li>Гормональные исследования</li>
+                    <li>Тесты на инфекции и аллергены</li>
+                </ul>
+                <p><strong>Преимущества:</strong> Высококвалифицированные лаборанты, современные технологии, быстрая обработка результатов.</p>
+            </article>
+
+            <article class="service-item">
+                <img src="images/osmotr.png" alt="Иконка осмотр">
+                <h3>Профилактические осмотры</h3>
+                <p>Регулярные осмотры для раннего выявления заболеваний и поддержания здоровья.</p>
+                <ul>
+                    <li>Общий медицинский осмотр</li>
+                    <li>Специальные осмотры для различных возрастных групп</li>
+                </ul>
+                <p><strong>Преимущества:</strong> Индивидуальные планы обследования, рекомендации по здоровому образу жизни.</p>
+            </article>
+
+            <article class="service-item">
+                <img src="images/vackcinaciy.png" alt="Иконка вакцинация">
+                <h3>Вакцинация</h3>
+                <p>Проводим вакцинацию против различных заболеваний.</p>
+                <ul>
+                    <li>Детская вакцинация</li>
+                    <li>Вакцинация для взрослых (грипп, коронавирус и др.)</li>
+                </ul>
+                <p><strong>Преимущества:</strong> Безопасные и эффективные вакцины, контроль состояния здоровья после вакцинации.</p>
+            </article>
+
+            <article class="service-item">
+                <img src="images/reabilitaciy.png" alt="Иконка реабилитация">
+                <h3>Медицинская реабилитация</h3>
+                <p>Программы восстановления после заболеваний и хирургических вмешательств.</p>
+                <ul>
+                    <li>Физиотерапия</li>
+                    <li>Массаж</li>
+                    <li>Психологическая поддержка</li>
+                </ul>
+                <p><strong>Преимущества:</strong> Индивидуальные программы реабилитации, профессиональный подход к каждому пациенту.</p>
+            </article>
+        </section>
+
+        <section id="doctors">
+            <h2>Врачи <img src="icon/t4.png" alt="Врачи" width="24" height="24"></h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+                <article class="doctor-item">
+                    <h3>Иванов Юрий Степанович</h3>
+                    <img src="images/Ivanov Yuri Stepanovich.jpg" alt="Иванов Юрий Степанович">
+                    <p>Терапевт. Опыт работы: 10 лет.</p>
+                </article>
+                <article class="doctor-item">
+                    <h3>Петрова Анна Петровна</h3>
+                    <img src="images/Petrova Anna Petrovna.jpg" alt="Петрова Анна Петровна">
+                    <p>Хирург. Опыт работы: 8 лет.</p>
+                </article>
+                <article class="doctor-item">
+                    <h3>Сидоров Сергей Александрович</h3>
+                    <img src="images/Sidorov Sergey Alexandrovich.jpg" alt="Сидоров Сергей Александрович">
+                    <p>Педиатр. Опыт работы: 5 лет.</p>
+                </article>
+                <article class="doctor-item">
+                    <h3>Кузнецова Ольга Васильевна</h3>
+                    <img src="images/Kuznetsova Olga Vasilievna.jpg" alt="Кузнецова Ольга Васильевна">
+                    <p>Офтальмолог. Опыт работы: 7 лет.</p>
+                </article>
+                <article class="doctor-item">
+                    <h3>Фёдоров Роман Викторович</h3>
+                    <img src="images/Fedorov Roman Viktorovich.jpg" alt="Фёдоров Роман Викторович">
+                    <p>Невролог. Опыт работы: 6 лет.</p>
+                </article>
+                <article class="doctor-item">
+                    <h3>Захарова Наталья Петровна</h3>
+                    <img src="images/Zakharova Natalya Petrovna.jpg" alt="Захарова Наталья Петровна">
+                    <p>Стоматолог. Опыт работы: 9 лет.</p>
+                </article>
+                <article class="doctor-item">
+                    <h3>Смирнов Алексей Евгеньевич</h3>
+                    <img src="images/Smirnov Alexey Evgenievich.jpg" alt="Смирнов Алексей Евгеньевич">
+                    <p>Онколог. Опыт работы: 4 года.</p>
+                </article>
+                <article class="doctor-item">
+                    <h3>Дмитриева Светлана Игоревна</h3>
+                    <img src="images/Dmitrieva Svetlana Igorevna.jpg" alt="Дмитриева Светлана Игоревна">
+                    <p>Врач общей практики. Опыт работы: 12 лет.</p>
+                </article>
+                <article class="doctor-item">
+                    <h3>Алексеева Мария Андреевна</h3>
+                    <img src="images/Alekseeva Maria Andreevna.jpg" alt="Алексеева Мария Андреевна">
+                    <p>Акушер-гинеколог. Опыт работы: 11 лет.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="doctors-schedule">
+            <h2>Расписание работы врачей <img src="icon/spric.png" alt="Расписание" width="24" height="24"></h2>
+            <article class="schedule-item">
+                <h3>Расписание Иванова И.И.</h3>
+                <p>Пн-Пт: 9:00 - 18:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Петровой А.П.</h3>
+                <p>Пн-Пт: 10:00 - 19:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Сидорова С.А.</h3>
+                <p>Пн-Пт: 9:00 - 17:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Кузнецовой О.В.</h3>
+                <p>Вт-Чт: 9:00 - 16:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Фёдорова Р.В.</h3>
+                <p>Пн-Пт: 9:00 - 18:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Захаровой Н.П.</h3>
+                <p>Пн-Пт: 10:00 - 18:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Смирнова А.Е.</h3>
+                <p>Пн-Пт: 8:00 - 16:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Дмитриевой С.И.</h3>
+                <p>Пн-Пт: 10:00 - 18:00</p>
+            </article>
+            <article class="schedule-item">
+                <h3>Расписание Алексеева М.А.</h3>
+                <p>Пн-Пт: 9:00 - 17:00</p>
+            </article>
+        </section>
+
+        <section id="appointment">
+            <h2>Запись на приём к врачу</h2>
+            <form>
+                <div class="form-group">
+                    <label for="doctor" class="form-label">Выберите врача:</label>
+                    <select id="doctor" class="form-select">
+                        <option value="">Выберите врача</option>
+                        <option value="therapist">Терапевт</option>
+                        <option value="dentist">Стоматолог</option>
+                        <option value="cardiologist">Кардиолог</option>
+                        <option value="pediatrician">Педиатр</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date" class="form-label">Выберите дату:</label>
+                    <input type="date" id="date" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time" class="form-label">Выберите время:</label>
+                    <input type="time" id="time" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn">Записаться на приём</button>
+                </div>
+            </form>
+        </section>
+
+        <aside class="sidebar">
+            <h2>Поиск прикрепления участка <img src="icon/glaz.png" alt="Поиск" width="24" height="24"></h2>
+            <div id="map-search">
+                <p>Введите адрес для поиска:</p>
+                <input type="text" placeholder="Ваш адрес" class="map-search__input">
+                <button class="btn" onclick="searchAddress()">Поиск</button>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer" id="contact">
+        <h2>Контакты <img src="icon/apparat.png" alt="Контакты" width="24" height="24"></h2>
+        <p>Email: info@medportal.ru</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>Адрес: г. Москва, ул. Примерная, д. 1</p>
+        <p>&copy; 2025 Региональный портал медицинских услуг. Все права защищены.</p>
     </footer>
+
+    <script>
+        function selectRegion() {
+            alert("Выберите регион.");
+        }
+
+        function login() {
+            alert("Вход в систему.");
+        }
+
+        function register() {
+            alert("Регистрация нового аккаунта.");
+        }
+
+        function searchAddress() {
+            alert("Поиск адреса.");
+        }
+    </script>
 </body>
 </html>
