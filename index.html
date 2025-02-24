@@ -4,140 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Региональный портал медицинских услуг</title>
-    <style>
-        /* Универсальные стили */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #3f898c;
-            color: #131414;
-        }
-
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('images/Background.jpg');
-            background-size: cover;
-            z-index: -1;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        h1, h2, h3 {
-            color: #102c35;
-        }
-
-        .services__title {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            margin-left: 10px;
-        }
-
-        a {
-            color: #101c1b;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            background-color: #092f39;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-
-        .service-item, .doctor-item {
-            background-color: white;
-            border: 1px solid #ddd;
-            margin: 10px auto;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-        }
-
-        .service-item__title, .doctor-item__name {
-            font-size: 18px;
-        }
-
-        .appointment {
-            background-color: #fafafa;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-            max-width: 600px;
-        }
-
-        .appointment__title {
-            text-align: center;
-            color: #102c35;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .form-select,
-        .form-input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .schedule-item {
-            margin: 10px 0;
-        }
-
-        .sidebar {
-            background-color: #eeeeee;
-            padding: 15px;
-            border-radius: 5px;
-        }
-
-        .footer {
-            background-color: #81c3c5;
-            color: #173f40;
-            padding: 20px 0;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/typography.css">    
 </head>
 <body>
     <div class="background"></div>
 
     <header class="header container">
         <div class="logo">
-            <img src="images/Logotip.jpg" alt="Логотип портала" class="logo__image">
+            <img src="images/logotip1.jpg" alt="Логотип портала" class="logo__image">
             <h1>Региональный портал медицинских услуг</h1>
         </div>
         <div class="auth-buttons">
@@ -226,47 +105,47 @@
             <div style="display: flex; flex-wrap: wrap; justify-content: center;">
                 <article class="doctor-item">
                     <h3>Иванов Юрий Степанович</h3>
-                    <img src="images/Ivanov Yuri Stepanovich.jpg" alt="Иванов Юрий Степанович">
+                    <img src="images/ivanov_yuri_stepanovich.jpg" alt="Иванов Юрий Степанович">
                     <p>Терапевт. Опыт работы: 10 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <h3>Петрова Анна Петровна</h3>
-                    <img src="images/Petrova Anna Petrovna.jpg" alt="Петрова Анна Петровна">
+                    <img src="images/petrova_anna_petrovna.jpg" alt="Петрова Анна Петровна">
                     <p>Хирург. Опыт работы: 8 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <h3>Сидоров Сергей Александрович</h3>
-                    <img src="images/Sidorov Sergey Alexandrovich.jpg" alt="Сидоров Сергей Александрович">
+                    <img src="images/sidorov_sergey_alexandrovich.jpg" alt="Сидоров Сергей Александрович">
                     <p>Педиатр. Опыт работы: 5 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <h3>Кузнецова Ольга Васильевна</h3>
-                    <img src="images/Kuznetsova Olga Vasilievna.jpg" alt="Кузнецова Ольга Васильевна">
+                    <img src="images/kuznetsova_olga_vasilievna.jpg" alt="Кузнецова Ольга Васильевна">
                     <p>Офтальмолог. Опыт работы: 7 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <h3>Фёдоров Роман Викторович</h3>
-                    <img src="images/Fedorov Roman Viktorovich.jpg" alt="Фёдоров Роман Викторович">
+                    <img src="images/fedorov_roman _viktorovich.jpg" alt="Фёдоров Роман Викторович">
                     <p>Невролог. Опыт работы: 6 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <h3>Захарова Наталья Петровна</h3>
-                    <img src="images/Zakharova Natalya Petrovna.jpg" alt="Захарова Наталья Петровна">
+                    <img src="images/zakharova_natalya_petrovna.jpg" alt="Захарова Наталья Петровна">
                     <p>Стоматолог. Опыт работы: 9 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <h3>Смирнов Алексей Евгеньевич</h3>
-                    <img src="images/Smirnov Alexey Evgenievich.jpg" alt="Смирнов Алексей Евгеньевич">
+                    <img src="images/smirnov_alexey_evgenievich.jpg" alt="Смирнов Алексей Евгеньевич">
                     <p>Онколог. Опыт работы: 4 года.</p>
                 </article>
                 <article class="doctor-item">
                     <h3>Дмитриева Светлана Игоревна</h3>
-                    <img src="images/Dmitrieva Svetlana Igorevna.jpg" alt="Дмитриева Светлана Игоревна">
+                    <img src="images/dmitrieva_svetlana_igorevna.jpg" alt="Дмитриева Светлана Игоревна">
                     <p>Врач общей практики. Опыт работы: 12 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <h3>Алексеева Мария Андреевна</h3>
-                    <img src="images/Alekseeva Maria Andreevna.jpg" alt="Алексеева Мария Андреевна">
+                    <img src="images/alekseeva_maria_andreevna.jpg" alt="Алексеева Мария Андреевна">
                     <p>Акушер-гинеколог. Опыт работы: 11 лет.</p>
                 </article>
             </div>

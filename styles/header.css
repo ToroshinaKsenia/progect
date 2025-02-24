@@ -1,24 +1,15 @@
-.menu {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+.header {
+    background-color: #092f39;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
     display: flex;
-    flex-wrap: wrap;
-   }
-   .menu__link{
-    display: block;
-    padding: 10px;
-    margin: 5px;
-    background-color: rgb(62, 120, 167);
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-   }
-   .header__login{
-    display: inline-block;
-     padding: 10px;
-     margin: 5px;
-     background-color: rgb(95, 103, 110);
-     color: rgb(255, 255, 255);
-     text-decoration: none;
-    }
-    
+    align-items: center;
+    margin-left: 10px;
+}
+
+h1, h2, h3 {
+    color: #102c35;
+}
