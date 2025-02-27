@@ -22,21 +22,17 @@
 
 .doctors-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
-    padding: 20px; 
+    grid-template-columns: repeat(3, 1fr); /* три колонки */
+    gap: 20px; /* расстояние между карточками */
 }
 
 .doctor-item {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 20px; 
-    text-align: center; 
-    height: 100%; 
+    background-color: #f9f9f9; /* цвет фона карточки */
+    border: 1px solid #ccc; /* рамка карточки */
+    border-radius: 8px; /* скругление углов */
+    padding: 15px; /* внутренние отступы */
+    text-align: center; /* центрирование текста */
+    overflow: hidden; /* предотвращает выход контента за пределы карточки */
 }
 
 .doctor-item:hover {
