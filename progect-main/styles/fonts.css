@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "IBMPlexSans";
+    src: url("../fonts/IBMPlexSans-SemiBoldItalic.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    }
+    @font-face {
+    font-family: "IBMPlexSans";
+    src: url("../fonts/IBMPlexSans-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    }
+    @font-face {
+    font-family: "IBMPlexSans";
+    src: url("../fonts/IBMPlexSans-Italic.ttf");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+    }
