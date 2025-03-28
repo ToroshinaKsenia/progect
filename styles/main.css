@@ -1,0 +1,165 @@
+.main {
+    background-color: rgb(228, 207, 207);
+}
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item, .doctor-item {
+    width: 90%;
+    max-width: 400px;
+}
+
+.appointment {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.schedule-item {
+    margin: 10px 0;
+    width: 300px;
+}
+
+.schedules {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.review-form{
+    display: flex; /* гибкое отображение */
+    
+    flex-direction: column; /* поставим все элементы вертикально*/
+  
+    gap: 5px; /*добавим отступы между элементами */
+  
+    width: 300px; /*укажем ширину всей формы*/
+}
+
+.review-form input{
+    padding: 5px;
+    border-radius: 8px;
+    }
+
+.review-form button{
+        text-decoration: none;
+        border: 2px solid #fff;
+        border-radius: 8px;
+        padding: 5px;
+        background-color: #3ba4af;
+        color: white;
+        }   
+        .ap appointment-container {
+            display: flex; /* Используем Flexbox для горизонтального выравнивания */
+            justify-content: space-between; /* Пространство между элементами */
+            align-items: flex-start; /* Выравнивание по верхнему краю */
+            max-width: 1200px; /* Максимальная ширина контейнера */
+            margin: 20px auto; /* Центрируем контейнер */
+            gap: 20px; /* Отступ между секциями */
+        }
+        
+        .appointment-container {
+            display: flex; /* Используем Flexbox для горизонтального выравнивания */
+            justify-content: space-between; /* Пробел между элементами */
+            align-items: flex-start; /* Выравнивание по верхнему краю */
+            max-width: 1200px; /* Максимальная ширина контейнера */
+            margin: 20px auto; /* Центрирование контейнера */
+            gap: 20px; /* Отступы между секциями */
+        }
+        
+        .appointment-container {
+            display: flex; /* Используем Flexbox для горизонтального выравнивания */
+            justify-content: center; /* Центрируем всё в контейнере */
+            align-items: flex-start; /* Выравнивание по верхнему краю */
+            max-width: 1200px; /* Максимальная ширина контейнера */
+            margin: 20px auto; /* Центрируем контейнер */
+        }
+        
+        #appointment {
+            flex: 2; /* Устанавливаем больший вес для окна записи на прием */
+            padding: 20px;
+            background-color: #f9f9f9; /* Цвет фона секции */
+            border-radius: 10px; /* Скругление углов */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+            width: 100%; /* Делаем ширину 100% от flex */
+            max-width: 600px; /* Ограничиваем максимальную ширину */
+        }
+        
+        .sidebar {
+            flex: 1; /* Устанавливаем меньший вес для окна поиска */
+            padding: 20px;
+            background-color: #f1f1f1; /* Цвет фона боковой панели */
+            border-radius: 10px; /* Скругление углов */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+            text-align: center; /* Центрирование текста */
+            width: 100%; /* Делаем ширину 100% от flex */
+            max-width: 400px; /* Ограничиваем максимальную ширину */
+            margin: 0 20px; /* Отступы по бокам для центрирования */
+        }
+        
+        .review-form, .form-group {
+            margin-bottom: 15px; /* Отступы между элементами формы */
+        }
+        
+        .form-label {
+            font-weight: bold; /* Жирный шрифт для меток */
+            display: block; /* Центрирование меток */
+            margin-bottom: 5px; /* Отступ ниже меток */
+        }
+        
+        .form-select, .form-input {
+            width: 100%; /* Полная ширина полей ввода */
+            padding: 10px; /* Внутренние отступы */
+            border: 1px solid #ddd; /* Рамка полей */
+            border-radius: 5px; /* Скругление углов */
+            font-size: 1rem; /* Размер шрифта */
+            transition: border-color 0.3s; /* Плавный переход при наведении */
+        }
+        
+        .form-select:focus, .form-input:focus {
+            border-color: #007bff; /* Цвет рамки при фокусе */
+            outline: none; /* Убираем стандартное обводение */
+        }
+        
+        .btn {
+            background-color: #117178; /* Цвет кнопки */
+            color: white; /* Цвет текста */
+            padding: 10px 15px; /* Внутренние отступы для кнопки */
+            border: none; /* Убираем рамку */
+            border-radius: 5px; /* Скругление углов */
+            cursor: pointer; /* Указатель на кнопке */
+            transition: background-color 0.3s; /* Плавный переход при наведении */
+            font-size: 1rem; /* Размер шрифта */
+        }
+        
+        .btn:hover {
+            background-color: #3ea098; /* Цвет кнопки при наведении */
+        }
+        
+        .map-search__input {
+            width: 80%; /* Ширина поля ввода для поиска */
+            padding: 10px; /* Внутренние отступы */
+            border: 1px solid #ddd; /* Рамка поля */
+            border-radius: 5px; /* Скругление углов */
+            margin-bottom: 10px; /* Отступ под полем */
+        }
+        
+        #map-search {
+            display: flex; /* Используем flex для горизонтального выравнивания */
+            flex-direction: column; /* Вертикальная ориентация элементов */
+            align-items: center; /* Центрирование элементов */
+        }
+        
+        
+
+        

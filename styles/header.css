@@ -1,0 +1,77 @@
+.header {
+    display: flex;
+    flex-direction: column; /* Размещение элементов по вертикали */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    padding: 10px 20px; /* Отступы вокруг заголовка */
+    background-color: hsl(180, 63%, 32%) /* Цвет фона заголовка */
+}
+
+.header > .logo {
+    display: flex;
+    align-items: center; /* Центрируем логотип по вертикали */
+    width: 100%; /* Ширина 100% для задания центрирования заголовка */
+    justify-content: space-between; /* Оставляем пространство между логотипом и текстом */
+}
+
+.logo__image {
+    border-radius: 32px;
+    max-height: 100px; /* Максимальная высота логотипа */
+    width: 100px;
+}
+
+h1 {
+    font-size: 45px;
+    flex-grow: 1; /* Позволяем заголовку занимать все доступное пространство */
+    text-align: center; /* Центрируем текст заголовка */
+}
+
+.auth-buttons {
+    display: flex;
+    justify-content: flex-end; /* Выравниваем кнопки вправо */
+    margin-top: 10px; /* Отступ сверху для кнопок */
+}
+
+.auth-buttons .btn {
+    margin-left: 10px; /* Отступ между кнопками */
+}
+
+.navigation {
+    font-size: 20px;
+    margin-top: 10px; /* Отступ сверху для навигации */
+    width: 100%; /* Занимаем полную ширину */
+}
+
+.navigation ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем встроенные отступы */
+    display: flex; /* Размещаем элементы списка в строку */
+    justify-content: center; /* Центрируем элементы списка */
+    width: 100%; /* Ширина по максимуму */
+}
+
+.navigation li {
+    margin: 0 15px; /* Отступы между элементами навигации */
+}
+
+.navigation a {
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color: #333; /* Цвет текста ссылок */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Плавная анимация изменений */
+    position: relative; /* Для добавления псевдоэлементов */
+}
+
+/* Эффект подсвечивания для ссылок при наведении */
+.navigation a:hover {
+    color: #3ea098; /* Цвет текста при наведении */
+}
+
+/* Добавление границы снизу для выделения */
+.navigation a:hover::after {
+    content: ''; /* Создание псевдоэлемента */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; /* Выравнивание по левому краю */
+    right: 0; /* Выравнивание по правому краю */
+    bottom: -5px; /* Расположение под текстом */
+    height: 2px; /* Высота линии */
+    background-color: #3ea098; /* Цвет линии */
+}
