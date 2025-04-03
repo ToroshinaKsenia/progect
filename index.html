@@ -15,17 +15,16 @@
 </head>
 <body>
     <div class="background"></div>
-
     <header class="header container">
         <div class="logo">
             <img src="images/logotip1.jpg" alt="Логотип портала" class="logo__image">
             <h1>Региональный портал медицинских услуг</h1>
         </div>
         <div class="auth-buttons">
-            <button class="btn" onclick="selectRegion()">Выбрать регион</button>
-            <button class="btn" onclick="login()">Вход</button>
-            <button class="btn" onclick="register()">Регистрация</button>
-        </div>
+            <button class="btn" id="selectRegionBtn">Выбрать регион</button>
+            <button class="btn" id="loginBtn">Вход</button>
+            <button class="btn btn-register" id="registerBtn">Регистрация</button>
+          </div>
         <nav class="navigation">
             <ul>
                 <li><a href="#services">Наши услуги</a></li>
@@ -44,13 +43,13 @@
             <article class="service-item">
                 <img src="images/konsultaciy.png" alt="Иконка консультации">
                 <h3>Консультативные услуги</h3>
-                <p>Мы предлагаем квалифицированную медицинскую помощь, консультации и диагностику.</p>
-                <ul>
-                    <li>Консультации терапевта</li>
-                    <li>Второе мнение от специалистов</li>
-                    <li>Психологические консультации</li>
-                    <li>Специальные консультации по заболеваниям</li>
-                </ul>
+                <p>Мы предлагаем квалифицированную медицинскую помощь и диагностику.</p>
+                <div class="service-features">
+                    <div>Консультации терапевта</div>
+                    <div>Второе мнение от специалистов</div>
+                    <div>Психологические консультации</div>
+                    <div>Специальные консультации по заболеваниям</div>
+                </div>
                 <p><strong>Преимущества:</strong> Индивидуальный подход, возможность выбора специалиста, быстрое оформление медицинской документации.</p>
             </article>
     
@@ -58,12 +57,12 @@
                 <img src="images/icon_fgds.png" alt="Иконка консультации">
                 <h3>Лабораторные исследования</h3>
                 <p>Проводим широкий спектр лабораторных анализов для диагностики заболеваний.</p>
-                <ul>
-                    <li>Общий анализ крови и мочи</li>
-                    <li>Биохимические анализы</li>
-                    <li>Гормональные исследования</li>
-                    <li>Тесты на инфекции и аллергены</li>
-                </ul>
+                <div class="service-features">
+                    <div>Общий анализ крови и мочи</div>
+                    <div>Биохимические анализы</div>
+                    <div>Гормональные исследования</div>
+                    <div>Исследование ликвора (спинномозговой жидкости)</div>
+                </div>
                 <p><strong>Преимущества:</strong> Высококвалифицированные лаборанты, современные технологии, быстрая обработка результатов.</p>
             </article>
     
@@ -71,10 +70,12 @@
                 <img src="images/analizy.png" alt="Иконка вакцинация">
                 <h3>Профилактические осмотры</h3>
                 <p>Регулярные осмотры для раннего выявления заболеваний и поддержания здоровья.</p>
-                <ul>
-                    <li>Общий медицинский осмотр</li>
-                    <li>Специальные осмотры для различных возрастных групп</li>
-                </ul>
+                <div class="service-features">
+                    <div>Общий медицинский осмотр</div>
+                    <div>Специальные осмотры для различных возрастных групп</div>
+                    <div>Check-up "Здоровье"</div>
+                    <div>Профосмотры для занятий спортом</div>
+                </div>
                 <p><strong>Преимущества:</strong> Индивидуальные планы обследования, рекомендации по здоровому образу жизни.</p>
             </article>
     
@@ -82,10 +83,10 @@
                 <img src="images/vackcinaciy.png" alt="Иконка вакцинация">
                 <h3>Вакцинация</h3>
                 <p>Проводим вакцинацию против различных заболеваний.</p>
-                <ul>
-                    <li>Детская вакцинация</li>
-                    <li>Вакцинация для взрослых (грипп, коронавирус и др.)</li>
-                </ul>
+                <div class="service-features">
+                    <div>Детская вакцинация</div>
+                    <div>Вакцинация для взрослых</div>
+                </div>
                 <p><strong>Преимущества:</strong> Безопасные и эффективные вакцины, контроль состояния здоровья после вакцинации.</p>
             </article>
     
@@ -93,11 +94,10 @@
                 <img src="images/reabilitaciy.png" alt="Иконка реабилитация">
                 <h3>Медицинская реабилитация</h3>
                 <p>Программы восстановления после заболеваний и хирургических вмешательств.</p>
-                <ul>
-                    <li>Физиотерапия</li>
-                    <li>Массаж</li>
-                    <li>Психологическая поддержка</li>
-                </ul>
+                <div class="service-features">
+                    <div>Физиотерапия</div>
+                    <div>Массаж</div>
+                </div>
                 <p><strong>Преимущества:</strong> Индивидуальные программы реабилитации, профессиональный подход к каждому пациенту.</p>
             </article>
         </section>
@@ -157,7 +157,7 @@
             <h2>Расписание работы врачей <img src="icon/spric.png" alt="Расписание" width="24" height="24"></h2>
             <div class="schedules"> 
             <article class="schedule-item">
-                <h3>Расписание Иванова И.И.</h3>
+                <h3>Расписание Иванова Ю.С.</h3>
                 <p>Пн-Пт: 9:00 - 18:00</p>
             </article>
             <article class="schedule-item">
@@ -236,7 +236,7 @@
                     <div id="map-search">
                         <p>Введите адрес для поиска:</p>
                         <input type="text" placeholder="Ваш адрес" class="map-search__input">
-                        <button class="btn" onclick="searchAddress()">Поиск</button>
+                        <button class="btn map-search__btn">Поиск</button>
                     </div>
                 </aside>
             </div>
@@ -250,5 +250,50 @@
         <p>&copy; 2025 Региональный портал медицинских услуг. Все права защищены.</p>
     </footer>
     <script src = "scripts/script.js"></script>
+    <!-- Модальное окно -->
+<div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">Регистрация</h2>
+      <form id="authForm">
+        <div id="fullNameFields">
+          <div class="form-group">
+            <label for="firstName">Имя:</label>
+            <input type="text" id="firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Фамилия:</label>
+            <input type="text" id="lastName" required>
+          </div>
+          <div class="form-group">
+            <label for="middleName">Отчество:</label>
+            <input type="text" id="middleName">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="username">Логин:</label>
+          <input type="text" id="username" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Номер телефона:</label>
+          <input type="tel" id="phone" required>
+        </div>
+        <button type="submit" class="btn">Продолжить</button>
+      </form>
+      <div class="switch-auth">
+        <button id="switchAuthBtn" class="btn-text">Уже есть аккаунт? Войти</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Уведомление об успешной регистрации -->
+  <div id="successNotification" class="notification">
+    <p>Регистрация прошла успешно!</p>
+  </div>
+  
+  <!-- Профиль в шапке -->
+  <div id="userProfile" class="user-profile" style="display: none;">
+    <span id="displayUsername"></span>
+  </div>
 </body>
 </html>

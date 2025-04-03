@@ -16,6 +16,34 @@
     max-width: 400px;
 }
 
+.service-features {
+    text-align: center;
+    margin: 8px 0;
+    line-height: 1.6;
+    color: black;
+    flex-grow: 1; /* Занимаем все доступное пространство */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем по вертикали */
+}
+
+.service-features::before,
+.service-features::after {
+    content: "";
+    display: block;
+    height: 1px; /* Толщина линии */
+    background-color: #3ea098; /* Цвет линии */
+    width: 100%; /* На всю ширину родителя */
+    margin: 10px 0; /* Отступы сверху/снизу */
+}
+
+/* Дополнительные стили для контента */
+.service-features div {
+    margin: 8px 0;
+    padding: 0 15px;
+    position: relative;
+}
+
 .appointment {
     background-color: #fafafa;
     padding: 20px;

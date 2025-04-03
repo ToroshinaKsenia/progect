@@ -81,5 +81,130 @@
     max-width: 150px; /* ограничиваем максимальную ширину изображения */
     border-radius: 4px; /* скругление изображения */
 }
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
 
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+#modalTitle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+/* Стили для профиля */
+.user-profile {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+  
+  /* Кнопки */
+  .btn {
+    display: block;        /* Делаем кнопку блочным элементом */
+    margin: 0 auto;       /* Автоматические отступы по бокам - центрирование */
+    width: fit-content;   /* Ширина по содержимому */
+    padding: 10px 30px;   /* Внутренние отступы */
+    background-color: #4CAF50; /* Цвет фона */
+    color: white;         /* Цвет текста */
+    border: none;         /* Убираем границу */
+    border-radius: 4px;   /* Скругляем углы */
+    cursor: pointer;      /* Курсор-указатель */
+    font-size: 16px;      /* Размер шрифта */
+    text-align: center;   /* Центрируем текст внутри кнопки */
+  }
+  .switch-auth {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .btn-text {
+    background: none;
+    border: none;
+    color: #2a868d;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  
+  .btn-text:hover {
+    color: #27525d;
+  }
+  
+  /* Уведомление */
+  .notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #64c0a1;
+    color: white;
+    padding: 8px 16px;           /* Уменьшенные отступы */
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Более мягкая тень */
+    z-index: 1001;
+    max-width: 300px;            /* Фиксированная максимальная ширина */
+    font-size: 14px;             /* Оптимальный размер текста */
+    line-height: 1.4;            /* Умеренный межстрочный интервал */
+    word-wrap: break-word;       /* Перенос длинных слов */
+    animation: fadeIn 0.3s ease; /* Плавное появление */
+  }
+  
+  /* Профиль пользователя */
+  .user-profile {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    background-color: #64c0a1;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #64c0a1;
+    color: #102c35;
+    font-weight: 500;
+  }
    
