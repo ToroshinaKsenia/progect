@@ -17,7 +17,7 @@
     <div class="background"></div>
     <header class="header container">
         <div class="logo">
-            <img src="images/logotip1.jpg" alt="Логотип портала" class="logo__image">
+            <img src="images/logotip.jpg" alt="Логотип портала" class="logo__image">
             <h1>Региональный портал медицинских услуг</h1>
         </div>
         <div class="auth-buttons">
@@ -107,47 +107,47 @@
             <div class="doctors-grid">
                 <article class="doctor-item">
                     <img src="images/ivanov_yuri_stepanovich.jpg" alt="Иванов Юрий Степанович">
-                    <h3>Иванов Юрий Степанович</h3>
+                    <h3 class="doctors_subtitle">Врач 1</h3>
                     <p>Терапевт. Опыт работы: 10 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <img src="images/petrova_anna_petrovna.jpg" alt="Петрова Анна Петровна">
-                    <h3>Петрова Анна Петровна</h3>
+                    <h3 class="doctors_subtitle">Врач 2</h3>
                     <p>Хирург. Опыт работы: 8 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <img src="images/sidorov_sergey_alexandrovich.jpg" alt="Сидоров Сергей Александрович">
-                    <h3>Сидоров Сергей Александрович</h3>
+                    <h3 class="doctors_subtitle">Врач 3</h3>
                     <p>Педиатр. Опыт работы: 5 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <img src="images/kuznetsova_olga_vasilievna.jpg" alt="Кузнецова Ольга Васильевна">
-                    <h3>Кузнецова Ольга Васильевна</h3>
+                    <h3 class="doctors_subtitle">Врач 4</h3>
                     <p>Офтальмолог. Опыт работы: 7 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <img src="images/fedorov_roman _viktorovich.jpg" alt="Фёдоров Роман Викторович">
-                    <h3>Фёдоров Роман Викторович</h3>
+                    <h3 class="doctors_subtitle">Врач 5</h3>
                     <p>Невролог. Опыт работы: 6 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <img src="images/zakharova_natalya_petrovna.jpg" alt="Захарова Наталья Петровна">
-                    <h3>Захарова Наталья Петровна</h3>
+                    <h3 class="doctors_subtitle">Врач 6</h3>
                     <p>Стоматолог. Опыт работы: 9 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <img src="images/smirnov_alexey_evgenievich.jpg" alt="Смирнов Алексей Евгеньевич">
-                    <h3>Смирнов Алексей Евгеньевич</h3>
+                    <h3 class="doctors_subtitle">Врач 7</h3>
                     <p>Онколог. Опыт работы: 4 года.</p>
                 </article>
                 <article class="doctor-item">
                     <img src="images/dmitrieva_svetlana_igorevna.jpg" alt="Дмитриева Светлана Игоревна">
-                    <h3>Дмитриева Светлана Игоревна</h3>
+                    <h3 class="doctors_subtitle">Врач 8</h3>
                     <p>Врач общей практики. Опыт работы: 12 лет.</p>
                 </article>
                 <article class="doctor-item">
                     <img src="images/alekseeva_maria_andreevna.jpg" alt="Алексеева Мария Андреевна">
-                    <h3>Алексеева Мария Андреевна</h3>
+                    <h3 class="doctors_subtitle">Врач 9</h3>
                     <p>Акушер-гинеколог. Опыт работы: 11 лет.</p>
                 </article>
             </div>
@@ -251,49 +251,53 @@
     </footer>
     <script src = "scripts/script.js"></script>
     <!-- Модальное окно -->
-<div id="authModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 id="modalTitle">Регистрация</h2>
-      <form id="authForm">
-        <div id="fullNameFields">
-          <div class="form-group">
-            <label for="firstName">Имя:</label>
-            <input type="text" id="firstName" required>
-          </div>
-          <div class="form-group">
-            <label for="lastName">Фамилия:</label>
-            <input type="text" id="lastName" required>
-          </div>
-          <div class="form-group">
-            <label for="middleName">Отчество:</label>
-            <input type="text" id="middleName">
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modalTitle">Регистрация</h2>
+          <form id="authForm">
+            <div id="fullNameFields">
+              <div class="form-group">
+                <label for="firstName">Имя:</label>
+                <input type="text" id="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Фамилия:</label>
+                <input type="text" id="lastName" required>
+              </div>
+              <div class="form-group">
+                <label for="middleName">Отчество:</label>
+                <input type="text" id="middleName">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="username">Логин:</label>
+              <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Номер телефона:</label>
+              <input type="tel" id="phone" required>
+            </div>
+            <button type="submit" class="btn">Продолжить</button>
+          </form>
+          <div class="switch-auth">
+            <button id="switchAuthBtn" class="btn-text">Уже есть аккаунт? Войти</button>
           </div>
         </div>
-        <div class="form-group">
-          <label for="username">Логин:</label>
-          <input type="text" id="username" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Номер телефона:</label>
-          <input type="tel" id="phone" required>
-        </div>
-        <button type="submit" class="btn">Продолжить</button>
-      </form>
-      <div class="switch-auth">
-        <button id="switchAuthBtn" class="btn-text">Уже есть аккаунт? Войти</button>
       </div>
-    </div>
-  </div>
-  
+
   <!-- Уведомление об успешной регистрации -->
   <div id="successNotification" class="notification">
     <p>Регистрация прошла успешно!</p>
   </div>
-  
   <!-- Профиль в шапке -->
   <div id="userProfile" class="user-profile" style="display: none;">
     <span id="displayUsername"></span>
   </div>
+  <button class="scroll-up" aria-label="Прокрутить вверх">
+    <svg class="scroll-up__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 12.6667L8 3.33337M8 3.33337L3.33333 8.00004M8 3.33337L12.6667 8.00004" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
 </body>
 </html>

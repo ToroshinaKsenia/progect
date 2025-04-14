@@ -182,7 +182,7 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: #64c0a1;
+    background-color: #117178;
     color: white;
     padding: 8px 16px;           /* Уменьшенные отступы */
     border-radius: 5px;
@@ -198,13 +198,46 @@
   /* Профиль пользователя */
   .user-profile {
     position: absolute;
-    right: 10px;
+    right: 5px;
     top: 20px;
-    background-color: #64c0a1;
+    background-color: #117178;
     padding: 8px 15px;
     border-radius: 20px;
-    border: 1px solid #64c0a1;
+    border: 1px solid #117178;
     color: #102c35;
     font-weight: 500;
   }
-   
+  .scroll-up {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1e929b;
+    border: 1px solid #117178;
+    box-shadow: 0 2px 8px rgb(215, 219, 224);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.scroll-up--show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-up__icon {
+    color: #f2f5f6;
+    width: 16px;
+    height: 16px;
+}
+
+.scroll-up:hover {
+    background-color: #65aeb3;
+}

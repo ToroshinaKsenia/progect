@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userProfile = document.getElementById('userProfile');
     const displayUsername = document.getElementById('displayUsername');
     
+
     // Показываем модальное окно при клике на кнопку регистрации
     registerBtn.addEventListener('click', function() {
       authModal.style.display = 'block';
@@ -89,4 +90,50 @@ document.addEventListener('DOMContentLoaded', () => {
       // Очищаем форму
       authForm.reset();
     });
+
+    const scrollUpButton = document.querySelector('.scroll-up');
+
+if (scrollUpButton) {
+    const windowHeight = document.documentElement.clientHeight;
+
+    document.addEventListener('scroll', () => {
+        let scrollPageY = window.scrollY; 
+
+        if (scrollPageY >= 300) { 
+          scrollUpButton.classList.add('scroll-up--show');
+      } else {
+          scrollUpButton.classList.remove('scroll-up--show');
+      }
+    });
+
+    scrollUpButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+const doctorsContainer = document.querySelector(".doctors-grid");
+
+if (doctorsContainer) {
+    const dataDoctorsNames = [
+        "Иванов Юрий Степанович",
+        "Петрова Анна Петровна",
+        "Сидоров Сергей Александрович",
+        "Кузнецова Ольга Васильевна",
+        "Фёдоров Роман Викторович",
+        "Захарова Наталья Петровна",
+        "Смирнов Алексей Евгеньевич",
+        "Дмитриева Светлана Игоревна",
+        "Алексеева Мария Андреевна"
+    ];
+
+    const doctorTitles = doctorsContainer.querySelectorAll(".doctors_subtitle");
+
+    doctorTitles.forEach((item, index) => {
+        if (dataDoctorsNames[index]) {
+            item.textContent = dataDoctorsNames[index];
+        }
+    });
+}
   });
