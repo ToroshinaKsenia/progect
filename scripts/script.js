@@ -135,5 +135,132 @@ if (doctorsContainer) {
             item.textContent = dataDoctorsNames[index];
         }
     });
+    // Объявляем переменную, которая будет содержать контейнер для карточек врачей
+const doctorsGrid = document.querySelector('.doctors__title');
+
+if (doctorsGrid) {
+    // Находим родительский контейнер для карточек (div с классом .doctors-grid)
+    const container = document.querySelector('.doctors-grid');
+
+    // Данные врачей (можете заменить или расширить по необходимости)
+    const doctorsData = [
+        {
+            imgSrc: 'images/ivanov_yuri_stepanovich.jpg',
+            altText: 'Врач 1',
+            name: 'Иванов Юрий Степанович',
+            description: 'Терапевт. Опыт работы: 10 лет.'
+        },
+        {
+            imgSrc: 'images/petrova_anna_petrovna.jpg',
+            altText: 'Врач 2',
+            name: 'Петрова Анна Петровна',
+            description: 'Хирург. Опыт работы: 8 лет.'
+        },
+        {
+            imgSrc: 'images/sidorov_sergey_alexandrovich.jpg',
+            altText: 'Врач 3',
+            name: 'Сидоров Сергей Александрович',
+            description: 'Педиатр. Опыт работы: 5 лет.'
+        },
+        {
+            imgSrc: 'images/kuznetsova_olga_vasilievna.jpg',
+            altText: 'Врач 4',
+            name: 'Кузнецова Ольга Васильевна',
+            description: 'Офтальмолог. Опыт работы: 7 лет.'
+        },
+        {
+            imgSrc: 'images/fedorov_roman _viktorovich.jpg',
+            altText: 'Врач 5',
+            name: 'Фёдоров Роман Викторович',
+            description: 'Невролог. Опыт работы: 6 лет.'
+        },
+        {
+            imgSrc: 'images/zakharova_natalya_petrovna.jpg',
+            altText: 'Врач 6',
+            name: 'Захарова Наталья Петровна',
+            description: 'Стоматолог. Опыт работы: 9 лет.'
+        },
+        {
+            imgSrc: 'images/smirnov_alexey_evgenievich.jpg',
+            altText: 'Врач 7',
+            name: 'Смирнов Алексей Евгеньевич',
+            description: 'Онколог. Опыт работы: 4 года.'
+        },
+        {
+            imgSrc: 'images/dmitrieva_svetlana_igorevna.jpg',
+            altText: 'Врач 8',
+            name: 'Дмитриева Светлана Игоревна',
+            description: 'Врач общей практики. Опыт работы: 12 лет.'
+        },
+        {
+            imgSrc: 'images/alekseeva_maria_andreevna.jpg',
+            altText: 'Врач 9',
+            name: 'Алексеева Мария Андреевна',
+            description: 'Акушер-гинеколог. Опыт работы: 11 лет.'
+        }
+   ];
+
+    // Функция для создания карточки врача
+    const createDoctorCard = (imgSrc, altText, name, description) => {
+        return `
+            <article class="doctor-item">
+                <img src="${imgSrc}" alt="${altText}">
+                <h3 class="doctors_subtitle">${name}</h3>
+                <p>${description}</p>
+            </article>
+        `;
+    };
+
+    // Проходим по массиву и добавляем каждую карточку в DOM
+    for (const doctor of doctorsData) {
+        const cardHTML = createDoctorCard(doctor.imgSrc, doctor.altText, doctor.name, doctor.description);
+        container.insertAdjacentHTML('beforeend', cardHTML);
+    }
+}
+// Находим контейнер навигации
+const navigation = document.querySelector('.navigation');
+
+if (navigation) {
+    // Находим список внутри навигации
+    const navList = navigation.querySelector('ul');
+    
+    // Данные для меню (добавлены пункты из вашего закомментированного HTML)
+    const menuData = {
+        services: {
+            link: '#services',
+            title: 'Наши услуги'
+        },
+        doctors: {
+            link: '#doctors',
+            title: 'Врачи'
+        },
+        schedule: {
+            link: '#doctors-schedule',
+            title: 'Расписание работы врачей'
+        },
+        map: {
+            link: '#map-search',
+            title: 'Поиск прикрепления участка'
+        },
+        contact: {
+            link: '#contact',
+            title: 'Контакты'
+        }
+    };
+
+    // Функция для создания HTML-строки пункта меню
+    const createMenuItem = (link, title) => {
+        return `
+            <li><a href="${link}">${title}</a></li>
+        `;
+    };
+
+    // Добавляем все пункты меню в список
+    for (const itemKey in menuData) {
+        const menuItem = menuData[itemKey];
+        const menuItemHTML = createMenuItem(menuItem.link, menuItem.title);
+        navList.insertAdjacentHTML('beforeend', menuItemHTML);
+    }
+}
 }
   });
