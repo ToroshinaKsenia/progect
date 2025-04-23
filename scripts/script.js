@@ -200,7 +200,7 @@ if (doctorsGrid) {
         }
    ];
 
-    // Функция для создания карточки врача
+
     const createDoctorCard = (imgSrc, altText, name, description) => {
         return `
             <article class="doctor-item">
@@ -211,20 +211,20 @@ if (doctorsGrid) {
         `;
     };
 
-    // Проходим по массиву и добавляем каждую карточку в DOM
+
     for (const doctor of doctorsData) {
         const cardHTML = createDoctorCard(doctor.imgSrc, doctor.altText, doctor.name, doctor.description);
         container.insertAdjacentHTML('beforeend', cardHTML);
     }
 }
-// Находим контейнер навигации
+
 const navigation = document.querySelector('.navigation');
 
 if (navigation) {
-    // Находим список внутри навигации
+
     const navList = navigation.querySelector('ul');
     
-    // Данные для меню (добавлены пункты из вашего закомментированного HTML)
+
     const menuData = {
         services: {
             link: '#services',
@@ -248,19 +248,105 @@ if (navigation) {
         }
     };
 
-    // Функция для создания HTML-строки пункта меню
+
     const createMenuItem = (link, title) => {
         return `
             <li><a href="${link}">${title}</a></li>
         `;
     };
 
-    // Добавляем все пункты меню в список
+
     for (const itemKey in menuData) {
         const menuItem = menuData[itemKey];
         const menuItemHTML = createMenuItem(menuItem.link, menuItem.title);
         navList.insertAdjacentHTML('beforeend', menuItemHTML);
     }
+}
+const cardsImages = document.querySelector(".images");
+
+if (cardsImages) {
+    const cardListImages = cardsImages.querySelector(".images__list");
+    const apiUrl = "images.json"; 
+
+    const createDoctorCard = (doctor) => {
+        const image = `
+            <article class="doctor-item">
+                <img src="${doctor.icon}" 
+                     alt="${doctor.iconAlt}" 
+                     width="${doctor.iconWidth}" 
+                     height="${doctor.iconHeight}">
+                <h3 class="doctors_subtitle">${doctor.title}</h3>
+                <p>${doctor.description}</p>
+            </article>
+        `;
+        return image;
+    };
+
+fetch(apiUrl)
+    .then((response) => response.json())
+    .then((doctor) => {
+        console.log(doctor); //
+        console.log(typeof doctor); 
+
+        doctors.forEach((doctor) => {
+            const cardElement = createDoctorCard(
+                doctor.icon,
+                doctor.iconAlt,
+                doctor.iconWidth,
+                doctor.iconHeight,
+                doctor.title,
+                doctor.description
+            );
+            cardListImages.insertAdjacentHTML("beforeend", cardElement);
+        });
+    })
+
+const initDoctorImages = () => {
+    const doctors = document.querySelectorAll('.doctor-item');
+    
+    doctors.forEach(doctor => {
+        const images = doctor.querySelectorAll('img');
+        
+        if(images.length > 1) {
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    images.forEach(sibling => {
+                        sibling.style.display = sibling === img ? 'none' : 'block';
+                    });
+                });
+            });
+        }
+    });
+};
+
+fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+
+        data.forEach(doctor => {
+            const card = `
+                <li class="images__item">
+                    <article class="doctor-item">
+                        <img src="${doctor.icon}" 
+                             alt="${doctor.iconAlt}" 
+                             width="${doctor.iconWidth}" 
+                             height="${doctor.iconHeight}" 
+                             style="display: block;">
+                        <img src="${doctor.secondaryImage}" 
+                             alt="${doctor.iconAlt}" 
+                             width="${doctor.iconWidth}" 
+                             height="${doctor.iconHeight}" 
+                             style="display: none;">
+                        <h3>${doctor.title}</h3>
+                        <p>${doctor.description}</p>
+                    </article>
+                </li>
+            `;
+            cardListImages.insertAdjacentHTML('beforeend', card);
+        });
+        
+        initDoctorImages();
+    });
 }
 }
   });

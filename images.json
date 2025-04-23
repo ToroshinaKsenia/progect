@@ -1,0 +1,84 @@
+[
+  {
+      "link": "#",
+      "icon": "images/ivanov_yuri_stepanovich.jpg",
+      "iconAlt": "Иванов Юрий Степанович",
+      "iconWidth": 170,
+      "iconHeight": 170,
+      "title": "Врач 1",
+      "description": "Терапевт. Опыт работы: 10 лет."
+  },
+  {
+      "link": "#",
+      "icon": "images/petrova_anna_petrovna.jpg",
+      "iconAlt": "Петрова Анна Петровна",
+      "iconWidth": 170,
+      "iconHeight": 170,
+      "title": "Врач 2",
+      "description": "Хирург. Опыт работы: 8 лет."
+  },
+  {
+      "link": "#",
+      "icon": "images/sidorov_sergey_alexandrovich.jpg",
+      "iconAlt": "Сидоров Сергей Александрович",
+      "iconWidth": 170,
+      "iconHeight": 170,
+      "title": "Врач 3",
+      "description": "Педиатр. Опыт работы: 5 лет."
+  },
+  {
+      "link": "#",
+      "icon": "images/kuznetsova_olga_vasilievna.jpg",
+      "iconAlt": "Кузнецова Ольга Васильевна",
+      "iconWidth": 170,
+      "iconHeight": 170,
+      "title": "Врач 4",
+      "description": "Офтальмолог. Опыт работы: 7 лет."
+  },
+  {
+      "link": "#",
+      "icon": "images/fedorov_roman _viktorovich.jpg",
+      "iconAlt": "Фёдоров Роман Викторович",
+      "iconWidth": 170,
+      "iconHeight": 170,
+      "title": "Врач 5",
+      "description": "Невролог. Опыт работы: 6 лет."
+  },
+  {
+      "link": "#",
+      "icon": "images/zakharova_natalya_petrovna.jpg",
+      "iconAlt": "Захарова Наталья Петровна",
+      "iconWidth": 170,
+      "iconHeight": 170,
+      "title": "Врач 6",
+      "description": "Стоматолог. Опыт работы: 9 лет."
+  },
+  {
+      "link": "#",
+      "icon": "images/smirnov_alexey_evgenievich.jpg",
+      "iconAlt": "Смирнов Алексей Евгеньевич",
+      "iconWidth": 170,
+      "iconHeight": 170,
+      "title": "Врач 7",
+      "description": "Онколог. Опыт работы: 4 года."
+  },
+  {
+      "link": "#",
+      "icon": "images/dmitrieva_svetlana_igorevna.jpg",
+      "iconAlt": "Дмитриева Светлана Игоревна",
+      "iconWidth": 170,
+      "iconHeight": 170,
+      "title": "Врач 8",
+      "description": "Врач общей практики. Опыт работы: 12 лет."
+  },
+  {
+      "link": "#",
+      "icon": "images/alekseeva_maria_andreevna.jpg",
+      "iconAlt": "Алексеева Мария Андреевна",
+      "iconWidth": 170,
+      "iconHeight": 170,
+      "title": "Врач 9",
+      "description": "Акушер-гинеколог. Опыт работы: 11 лет."
+  }
+]
+     
