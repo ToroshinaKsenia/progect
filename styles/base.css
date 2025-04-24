@@ -19,47 +19,6 @@
     margin: 0 auto; 
 }
 
-.doctors-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* три колонки */
-    gap: 20px; /* расстояние между карточками */
-}
-
-.doctor-item {
-    background-color: #f9f9f9; /* цвет фона карточки */
-    border: 1px solid #ccc; /* рамка карточки */
-    border-radius: 8px; /* скругление углов */
-    padding: 15px; /* внутренние отступы */
-    text-align: center; /* центрирование текста */
-    overflow: hidden; /* предотвращает выход контента за пределы карточки */
-}
-
-.doctor-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.doctor-item img {
-    width: 170px; 
-    height: 170px; 
-    border-radius: 100%;
-    object-fit: cover; 
-    margin-bottom: 15px; 
-}
-
-.doctor-item h3 {
-    font-size: 1.5rem;
-    color: #102c35;
-    margin: 15px 0; 
-}
-
-.doctor-item p {
-    font-size: 1rem;
-    color: #555;
-    margin: 10px 0; 
-    line-height: 1.5;
-}
-
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* три колонки */

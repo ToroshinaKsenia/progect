@@ -11,4 +11,5 @@
 /* Подключение стилей относящихся к main */
 @import "main.css";
 @import "media.css";
-@import "images.css";
+/* Подключение стилей относящихся к карточкам докторов*/
+@import "doctors.css"
