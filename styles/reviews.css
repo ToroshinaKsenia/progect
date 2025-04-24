@@ -1,0 +1,161 @@
+/* Основные стили слайдера */
+.card--slider.swiper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card__list--slider {
+    padding: 20px 0;
+}
+
+/* Стили карточки отзыва */
+.card__item {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    min-height: 260px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    width: calc(33.333% - 20px) !important;
+    margin-right: 30px;
+    box-sizing: border-box;
+}
+
+.card__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Типографика */
+.card__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: black;
+    line-height: 1.3;
+}
+
+.card__description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: auto;
+}
+
+/* Стили подписи автора */
+.review-author {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #4e5560;
+    font-style: italic;
+    text-align: right;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Навигационные кнопки */
+.swiper-button-next,
+.swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background: #3ba4af;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: #3ba4af;
+}
+
+/* Пагинация */
+.swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #5aacb5;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #12525a;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 1200px) {
+    .card__item {
+        width: calc(50% - 15px) !important;
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card--slider.swiper {
+        padding: 1rem;
+    }
+    
+    .card__item {
+        width: 100% !important;
+        margin-right: 0;
+        min-height: 240px;
+        padding: 1rem;
+    }
+    
+    .card__title {
+        font-size: 1.1rem;
+    }
+    
+    .card__description {
+        font-size: 0.9rem;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .card__item {
+        min-height: 220px;
+    }
+    
+    .card__title {
+        font-size: 1rem;
+    }
+    
+    .card__description {
+        font-size: 0.85rem;
+    }
+    
+    .review-author {
+        font-size: 0.8rem;
+    }
+}

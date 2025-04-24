@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Региональный портал медицинских услуг</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="styles/doctors.css">
     <link rel="stylesheet" href="styles/preloader.css">
     <link rel="stylesheet" href="styles/animation.css">
+    <link rel="stylesheet" href="styles/reviews.css">
 
 </head>
 <body>
@@ -200,7 +202,79 @@
             </article>
         </div>
         </section>
-  
+        <section class="section reviews-section">
+            <div class="section-heading">
+                <h2 class="section-heading__title">Отзывы<img src="icon/super.webp" width="24" height="24"></h2>
+            </div>
+        <section class="section card card--slider swiper">
+            <div class="card__list card__list--slider swiper-wrapper">
+                <!-- Иванов Юрий Степанович -->
+                <a class="card__item swiper-slide" href="#">
+                    <h3 class="card__title">Иванов Ю.С. - Терапевт</h3>
+                    <p class="card__description">Профессионал с большой буквы! За 10 лет практики идеально диагностирует заболевания. Всегда находит нужные слова для пациентов.</p>
+                    <div class="review-author">С уважением, Ольга Васильева</div>
+                </a>
+        
+                <!-- Петрова Анна Петровна -->
+                <a class="card__item swiper-slide" href="#">
+                    <h3 class="card__title">Петрова А.П. - Хирург</h3>
+                    <p class="card__description">Блестяще провела сложную операцию. 8 лет опыта чувствуются в каждой детали подхода. Рекомендую как специалиста экстра-класса!</p>
+                    <div class="review-author">Дмитрий Соколов, пациент</div>
+                </a>
+        
+                <!-- Сидоров Сергей Александрович -->
+                <a class="card__item swiper-slide" href="#">
+                    <h3 class="card__title">Сидоров С.А. - Педиатр</h3>
+                    <p class="card__description">Лучший детский врач! За 5 лет работы нашёл подход даже к самым капризным малышам. Наблюдаемся у него с рождения ребёнка.</p>
+                    <div class="review-author">Марина Игнатьева, мама пациента</div>
+                </a>
+        
+                <!-- Кузнецова Ольга Васильевна -->
+                <a class="card__item swiper-slide" href="#">
+                    <h3 class="card__title">Кузнецова О.В. - Офтальмолог</h3>
+                    <p class="card__description">Вернула зрение моей маме! 7 лет практики позволяют ей решать самые сложные случаи. Современное оборудование + человеческое отношение.</p>
+                    <div class="review-author">Алексей Комаров, сын пациентки</div>
+                </a>
+        
+                <!-- Фёдоров Роман Викторович -->
+                <a class="card__item swiper-slide" href="#">
+                    <h3 class="card__title">Фёдоров Р.В. - Невролог</h3>
+                    <p class="card__description">Избавил от хронических мигреней! За 6 лет разработал уникальные методики лечения. Постоянно повышает квалификацию.</p>
+                    <div class="review-author">Екатерина Семёнова</div>
+                </a>
+        
+                <!-- Захарова Наталья Петровна -->
+                <a class="card__item swiper-slide" href="#">
+                    <h3 class="card__title">Захарова Н.П. - Стоматолог</h3>
+                    <p class="card__description">Делает безболезненное лечение! 9 лет опыта в эстетической стоматологии. Теперь вся семья у неё наблюдается.</p>
+                    <div class="review-author">Семья Ворониных</div>
+                </a>
+        
+                <!-- Смирнов Алексей Евгеньевич -->
+                <a class="card__item swiper-slide" href="#">
+                    <h3 class="card__title">Смирнов А.Е. - Онколог</h3>
+                    <p class="card__description">Настоящий борец за здоровье! Несмотря на молодость (4 года опыта), проявляет мудрость старших коллег. Вселяет надежду и уверенность.</p>
+                    <div class="review-author">Ангелина Миронова, дочь пациентки</div>
+                </a>
+        
+                <!-- Дмитриева Светлана Игоревна -->
+                <a class="card__item swiper-slide" href="#">
+                    <h3 class="card__title">Дмитриева С.И. - Врач общей практики</h3>
+                    <p class="card__description">Универсальный специалист! 12 лет решает любые медицинские вопросы. Координирует лечение между специалистами - всё под контролем!</p>
+                    <div class="review-author">Артём Григорьев</div>
+                </a>
+        
+                <!-- Алексеева Мария Андреевна -->
+                <a class="card__item swiper-slide" href="#">
+                    <h3 class="card__title">Алексеева М.А. - Акушер-гинеколог</h3>
+                    <p class="card__description">Приняла лучшие роды в моей жизни! 11 лет опыта в сочетании с душевной теплотой. Вела беременность от первого приёма до родзала.</p>
+                    <div class="review-author">Светлана и Кирилл Новиковы</div>
+                </a>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </section>
         <div class="appointment-container">
             <section id="appointment">
                 <h2>Запись на приём к врачу <img src="icon/apparat.png" alt="Запись на приём к врачу" width="24" height="24"></h2>
@@ -304,5 +378,6 @@
         <path d="M8 12.6667L8 3.33337M8 3.33337L3.33333 8.00004M8 3.33337L12.6667 8.00004" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
 </button>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

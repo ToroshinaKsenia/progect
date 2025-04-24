@@ -317,5 +317,45 @@ if (preloader && content) {
         preloader.remove();
     }, 3000); // Задержка 3 секунды
 }
+const slider = document.querySelector('.swiper');
+
+if (slider) {
+    const swiper = new Swiper(slider, {
+        slidesPerView: 1, // По умолчанию для мобильных
+        spaceBetween: 20,
+        loop: true,
+        
+        // Адаптивная настройка
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 25
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        },
+
+        // Пагинация
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // Навигационные стрелки
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // Дополнительные настройки
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+    });
+}
+
 }
   });
